@@ -1,0 +1,193 @@
+:root {
+    --primary: #2563eb;
+    --primary-light: #dbeafe;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --accent: #10b981;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: var(--light);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+  }
+  .corner {
+    position: absolute;
+    width: 200px;   /* Adjust size */
+    height: 200px;  /* Adjust size */
+    background-color: #2563eb;  /* Tailwind blue-600 */
+    z-index: -1;  /* Ensure it's behind content */
+  }
+  
+  /* Top-left corner */
+  .top-left {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 200px;  /* Quarter-circle shape for top-left */
+  }
+  
+  /* Bottom-right corner */
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 200px;  /* Quarter-circle shape for bottom-right */
+  }
+  
+  /* Main content */
+  .center-content {
+    text-align: center;
+    z-index: 1;  /* Make sure content stays above the corners */
+  }
+  
+  
+  
+  .atom-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 1.5rem;
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+  }
+  
+  .atom-icon {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .atom-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    filter: blur(40px);
+    background: rgba(37, 99, 235, 0.15);
+    z-index: -1;
+  }
+  
+  .logo-text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    color: #64748b;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.3; }
+  }
+  
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(80px);
+  }
+  
+  .floating-element.top-left {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+    background: radial-gradient(circle, rgba(37,99,235,0.15), transparent);
+  }
+  
+  .floating-element.bottom-right {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: -50px;
+    background: radial-gradient(circle, rgba(16,185,129,0.15), transparent);
+  }
+
+ 
+  
+  .chat-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    margin-bottom: 30px;
+    z-index: 10;
+  }
+  
+  .chat-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0.3;
+    z-index: -1;
+    animation: pulse 2s infinite;
+  }
+  
+  
+  .footer {
+    position: fixed;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    z-index: 5;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .logo-text {
+      font-size: 2rem;
+    }
+    .atom-container {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  

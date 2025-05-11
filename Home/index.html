@@ -3,212 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Teach Me Ai Bot</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(145deg, #e4f0fb, #ffffff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-image: url("https://www.transparenttextures.com/patterns/white-wall.png");
-    }
-
-    header {
-      background: linear-gradient(90deg, #0077ff, #00b4ff);
-      color: white;
-      width: 100%;
-      padding: 1.5rem 0;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      animation: slideDown 1s ease-out;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      letter-spacing: 1.5px;
-    }
-
-    .chat-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      background: #fdfdfd;
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 20px;
-      box-shadow: 10px 10px 30px rgba(0,0,0,0.05), -10px -10px 30px rgba(255,255,255,0.9);
-      max-width: 900px;
-      width: 90%;
-      position: relative;
-      z-index: 10;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .left-side {
-      flex: 1 1 350px;
-      padding: 1rem;
-      font-size: 1.1rem;
-      color: #333;
-      margin-right: 2rem;
-    }
-
-    .left-side h2 {
-      font-size: 1.8rem;
-      color: #0077ff;
-      margin-bottom: 1rem;
-    }
-
-    .left-side p {
-      margin: 1rem 0;
-      line-height: 1.7;
-    }
-
-    .image-container {
-      display: flex; 
-      justify-content: space-evenly; 
-      margin-top: 1rem;
-      gap: 15px;
-      overflow-x: auto; 
-    }
-
-    .image-container img {
-      width: 130px;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .image-container img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5); 
-    }
-
-    .image-container div {
-      text-align: center;
-    }
-
-    .image-container div p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #333;
-    }
-
-    df-messenger {
-      width: 100%;
-      height: 100%;
-      max-width: 480px;
-      flex-grow: 1;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      margin-top: 1rem;
-    }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: #666;
-      text-align: center;
-      padding: 1rem;
-      animation: fadeIn 2s ease-in;
-    }
-
-    footer a {
-      color: #0077ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes slideDown {
-      0% { transform: translateY(-100%); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @media (max-width: 768px) {
-      .chat-container {
-        flex-direction: column;
-      }
-
-      .left-side {
-        margin-right: 0;
-        margin-bottom: 2rem;
-      }
-
-      df-messenger {
-        height: 400px;
-      }
-
-      .image-container {
-        flex-direction: column;
-        gap: 20px;
-      }
-    }
-  </style>
+  <title>Innovative Geeks</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Teach Me Ai Bot 🤖</h1>
-  </header>
 
-  <div class="chat-container">
-    <div class="left-side">
-      <h2>Welcome to Teach Me Ai Bot!</h2>
-      <p>Hi there! I am your personal assistant to help you explore the amazing world of AI.</p>
-      <p>Want to learn more about concepts like Neural Networks, NLP, or AI Ethics? Just ask away!</p>
-      <div class="image-container">
-        <div>
-          <img src="CEO-square.jpg" alt="AI Robot" />
-          <p>AI Robot</p>
-        </div>
-        <div>
-          <img src="ml.jpg" alt="Machine Learning" />
-          <p>Machine Learning</p>
-        </div>
-        <div>
-          <img src="nlp.jpg" alt="Natural Language Processing" />
-          <p>Natural Language Processing</p>
-        </div>
-        <div>
-          <img src="neuraln.png" alt="Neural Networks" />
-          <p>Neural Networks</p>
-        </div>
-        <div>
-          <img src="ethics.png" alt="AI Ethics" />
-          <p>AI Ethics</p>
-        </div>
-      </div>
+  <!-- Decorative Backgrounds -->
+  <div class="corner top-left"></div>
+  <div class="corner bottom-right"></div>
+
+  <!-- Main Content -->
+  <div class="center-content">
+    <div class="atom-container">
+      <!-- Atom SVG -->
+      <svg class="atom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <g>
+          <ellipse cx="256" cy="256" rx="200" ry="80" stroke="#2563eb" stroke-width="6" fill="none" transform="rotate(0 256 256)">
+            <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="20s" repeatCount="indefinite"/>
+          </ellipse>
+          <ellipse cx="256" cy="256" rx="200" ry="80" stroke="#2563eb" stroke-width="6" fill="none" transform="rotate(60 256 256)">
+            <animateTransform attributeName="transform" type="rotate" from="60 256 256" to="420 256 256" dur="15s" repeatCount="indefinite"/>
+          </ellipse>
+          <ellipse cx="256" cy="256" rx="200" ry="80" stroke="#2563eb" stroke-width="6" fill="none" transform="rotate(120 256 256)">
+            <animateTransform attributeName="transform" type="rotate" from="120 256 256" to="480 256 256" dur="25s" repeatCount="indefinite"/>
+          </ellipse>
+          <circle cx="256" cy="256" r="25" fill="#2563eb"/>
+          <circle cx="456" cy="256" r="12" fill="#2563eb">
+            <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="20s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="156" cy="386" r="12" fill="#2563eb">
+            <animateTransform attributeName="transform" type="rotate" from="60 256 256" to="420 256 256" dur="15s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="156" cy="126" r="12" fill="#2563eb">
+            <animateTransform attributeName="transform" type="rotate" from="120 256 256" to="480 256 256" dur="25s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
+      <div class="atom-glow"></div>
     </div>
-    
-    <div class="chatbot">
-      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-      <df-messenger
-        intent="WELCOME"
-        chat-title="TeachMeAi"
-        agent-id="52180af1-da41-42db-834d-9ec96d15fcd8"
-        language-code="en"
-      ></df-messenger>
-    </div>
+    <h1 class="logo-text">Innovative Geeks</h1>
+    <p class="tagline">Where innovation meets intelligence</p>
   </div>
 
-  <footer>
-    🚀 Innovative Geeks | Built with ❤️ 
-  </footer>
+  <!-- Chat Button -->
+  <div class="chat-button" id="chatButton">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Innovative Geeks
+  </div>
+
+  <!-- Dialogflow Messenger script will be loaded by your JS file -->
+  <script src="script.js"></script>
+
+  <!-- The following script will handle chatbot initialization -->
+  <script>
+    document.getElementById("chatButton").addEventListener("click", function () {
+      if (document.querySelector('df-messenger')) return;
+
+      // Create df-messenger element
+      const dfMessenger = document.createElement("df-messenger");
+      dfMessenger.setAttribute("intent", "WELCOME");
+      dfMessenger.setAttribute("chat-title", "MyBot");
+      dfMessenger.setAttribute("agent-id", "TeachMeAI");
+      dfMessenger.setAttribute("language-code", "en");
+      document.body.appendChild(dfMessenger);
+
+      // Load Dialogflow Messenger script
+      const script = document.createElement("script");
+      script.src = "https://www.gstatic.com/dialogflow-console/fast/messenger/messenger-internal.min.js?v=4";
+      document.body.appendChild(script);
+    });
+  </script>
+
 </body>
 </html>

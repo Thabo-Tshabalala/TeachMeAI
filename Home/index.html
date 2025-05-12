@@ -8,14 +8,11 @@
 </head>
 <body>
 
-  <!-- Decorative Backgrounds -->
   <div class="corner top-left"></div>
   <div class="corner bottom-right"></div>
 
-  <!-- Main Content -->
   <div class="center-content">
     <div class="atom-container">
-      <!-- Atom SVG -->
       <svg class="atom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <g>
           <ellipse cx="256" cy="256" rx="200" ry="80" stroke="#2563eb" stroke-width="6" fill="none" transform="rotate(0 256 256)">
@@ -45,40 +42,19 @@
     <p class="tagline">Where innovation meets intelligence</p>
   </div>
 
-  <!-- Chat Button -->
-  <div class="chat-button" id="chatButton">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-    </svg>
-  </div>
-
-  <!-- Footer -->
   <div class="footer">
     © 2025 Innovative Geeks
   </div>
 
-  <!-- Dialogflow Messenger script will be loaded by your JS file -->
-  <script src="script.js"></script>
-
-  <!-- The following script will handle chatbot initialization -->
-  <script>
-    document.getElementById("chatButton").addEventListener("click", function () {
-      if (document.querySelector('df-messenger')) return;
-
-      // Create df-messenger element
-      const dfMessenger = document.createElement("df-messenger");
-      dfMessenger.setAttribute("intent", "WELCOME");
-      dfMessenger.setAttribute("chat-title", "MyBot");
-      dfMessenger.setAttribute("agent-id", "TeachMeAI");
-      dfMessenger.setAttribute("language-code", "en");
-      document.body.appendChild(dfMessenger);
-
-      // Load Dialogflow Messenger script
-      const script = document.createElement("script");
-      script.src = "https://www.gstatic.com/dialogflow-console/fast/messenger/messenger-internal.min.js?v=4";
-      document.body.appendChild(script);
-    });
-  </script>
+  <div class="chat-container">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="TeachMeAi"
+      agent-id="52180af1-da41-42db-834d-9ec96d15fcd8"
+      language-code="en"
+    ></df-messenger>
+  </div>
 
 </body>
 </html>
